@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Postal Rate Calculator</title>
+    <script src="validateForm.js"></script>
+</head>
+<body>
+<div>
+    <form id="form" action="/getRate" method="GET">
+        <label for="weight">Weight of package</label>
+        <input id="weight" type="number" value="0" name="weight"  step=".5" min="0" max="3.5">
+        <br>
+        <select name="postage" id="type" onblur="getMax()">
+            <option value="stamped">Letters(Stamped)</option>
+            <option value="metered">Letters(Metered</option>
+            <option value="flats">Large Envelops(Flats)</option>
+            <option value="first_class">First-Class Package Service-Retail</option>
+        </select>
+        <br>
+        <input type="submit" value="Get Rate">
+    </form>
+</div>
+
+</body>
+</html>

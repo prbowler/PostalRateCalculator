@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rate</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+<h1>Rate</h1>
+<div>
+    <table style="width: 50%">
+        <tr>
+            <th>Mail Type</th>
+            <th>Weight</th>
+            <th>Rate</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td><%= mailType %></td>
+            <td><%= weight %>oz</td>
+            <td>$<%= rate %></td>
+            <td>$<%= price %></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
