@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Postal Rate Calculator</title>
-    <script src="validateForm.js"></script>
+    <script src="js/setMaxWeight.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/form.css">
 </head>
 <body>
-<div>
+<h1>Postal rate calculator</h1>
+<div id="calculator">
+    <h2>Enter the weight and type of your package</h2>
     <form id="form" action="/getRate" method="GET">
-        <label for="weight">Weight of package</label>
-        <input id="weight" type="number" value="0" name="weight"  step=".5" min="0" max="3.5">
-        <br>
-        <select name="postage" id="type" onblur="getMax()">
-            <option value="stamped">Letters(Stamped)</option>
-            <option value="metered">Letters(Metered</option>
-            <option value="flats">Large Envelops(Flats)</option>
-            <option value="first_class">First-Class Package Service-Retail</option>
-        </select>
-        <br>
-        <input type="submit" value="Get Rate">
+        <div id="weight_info">
+            <label for="weight">Weight of package</label>
+            <input id="weight" type="number" value="0" name="weight"  step=".5" min=".5" max="3.5">
+        </div>
+        <div id="type_info">
+            <select name="postage" id="type" onblur="setMax()">
+                <option value="stamped">Letters(Stamped)</option>
+                <option value="metered">Letters(Metered</option>
+                <option value="flats">Large Envelops(Flats)</option>
+                <option value="first_class">First-Class Package Service-Retail</option>
+            </select>
+        </div>
+        <input id="submit_button" type="submit" value="Get Rate">
     </form>
 </div>
 

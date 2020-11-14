@@ -1,0 +1,23 @@
+h1 {
+    text-align:center;
+}
+
+#calculator {
+    border:solid;
+    padding:40px;
+    width:fit-content;
+}
+
+#weight_info {
+    margin-left:40px;
+}
+
+#type_info {
+    margin-left:40px;
+    margin-top:20px;
+}
+
+#submit_button {
+    margin-left:40px;
+    margin-top:80px;
+}

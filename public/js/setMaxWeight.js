@@ -1,5 +1,4 @@
-function getMax() {
-    //alert("This seems to work");
+function setMax() {
 
     let weight = document.forms["form"]["weight"];
     let mailType = document.forms["form"]["postage"].value;

@@ -1,6 +1,6 @@
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
+const express = require('express');
+const path = require('path');
+const PORT = process.env.PORT || 5000;
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -36,8 +36,8 @@ function calculateRate(req, res) {
             rate = 0;
     }
 
-    const price = weight * rate;
-    const params = {weight: weight, mailType: type, rate: rate, price: price};
+    if (weight == 0) {rate = 0;}
+    const params = {weight: weight, mailType: type, rate: rate};
 
     res.render('pages/display_rate', params);
 
